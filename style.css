@@ -1,91 +1,146 @@
-/* General Body Styles */
+/* Set the default cursor to normal (text or default system cursor) */
 body {
+    cursor: default; /* Default cursor for normal mouse events */
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    font-family: Inter, Arial, sans-serif;
-    color: var(--text-color);
-    cursor: none; /* Custom cursor style hides the default cursor */
-    animation: fadeIn 1s ease-in-out;
+    background-color: #2a2a31;
+    font-family: Arial, sans-serif;
+    color: #fff;
 }
 
-/* Default Cursor (text or system default) */
-a:hover, button:hover, .card:hover, nav ul li:hover, .hoverable:hover {
-    cursor: pointer; /* Pointer cursor on hoverable elements */
+/* Change cursor to pointer for clickable elements */
+a:hover, button:hover, .card:hover, nav ul li:hover {
+    cursor: pointer;  /* Pointer cursor on hoverable elements */
 }
 
-/* Modal Styles */
-.tour-modal-checkbox {
-    display: none;
-}
-
-.tour-modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 60px;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Modal Visible When Checkbox is Checked */
-.tour-modal-checkbox:checked + .tour-modal {
-    display: block;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
+/* Example of hoverable clickable elements */
+.card {
+    background-color: #35353f;
     padding: 20px;
-    border: 1px solid #888;
-    width: 40%;
-    position: relative; /* Ensures the close button is positioned inside */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #fff;
+    cursor: default; /* Keep normal cursor when not hovered */
 }
 
-.close-btn {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    color: black;
-    text-decoration: none;
-}
-
-.option-button {
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    background-color: #47ebeb;
-    border: none;
-    font-size: 16px;
-    color: white;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
-
-.option-button:hover {
-    background-color: #2a8d8d;
-}
-
-/* Link and Button Hover Styles */
-a, button, .card, nav ul li, .social-icons a, .hoverable {
-    cursor: pointer;
+.card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s;
 }
 
 a {
     text-decoration: none;
+    color: #47ebeb;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --accent-color: #47ebeb;
+    --background-color: #2a2a31;
+    --text-color: #fff;
+    --text-color-muted: #b9b9b9;
+    --font-size-xs: 14px;
+    --font-size-sm: 16px;
+    --font-size-md: 18px;
+    --font-size-lg: 24px;
+    --font-size-xl: 28px;
+    --font-size-xxl: 88px;
+    --cursor-color: #FFF700; /* Lemon Yellow Color */
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: Inter, Arial, sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    cursor: none; /* Hide default cursor */
+    animation: fadeIn 1s ease-in-out;
+}
+
+#page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    opacity: 0;
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    opacity: 0;
+    animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+.logo a {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
     color: var(--accent-color);
+    text-decoration: none;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: pointer; /* Hand cursor when hovering on links */
+}
+
+section {
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: slideInFromBottom 1.2s ease-in-out forwards;
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+    color: var(--accent-color);
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+    transition: transform 0.3s;
+}
+
+h3:hover {
+    transform: translateY(-5px);
+    cursor: pointer; /* Hand cursor on hover */
+}
+
+p {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    color: var(--text-color-muted);
 }
 
 .card {
@@ -101,6 +156,7 @@ a {
 .card:hover {
     transform: scale(1.02);
     transition: transform 0.3s;
+    cursor: pointer; /* Hand cursor when hovering on cards */
 }
 
 .project-links a {
@@ -108,10 +164,29 @@ a {
     text-decoration: none;
     display: inline-block;
     margin-top: 10px;
-    cursor: pointer;
+    cursor: pointer; /* Hand cursor when hovering on project links */
 }
 
-/* Custom Cursor Styles */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #484851;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: var(--font-size-md);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    cursor: pointer; /* Hand cursor when hovering on social links */
+}
+
+/* Custom Cursor */
 .cursor {
     position: fixed;
     width: 20px;
@@ -129,6 +204,26 @@ a {
     width: 50px;
     height: 50px;
     transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Highlight on Hover */
+a:hover, button:hover, .card:hover, nav ul li:hover {
+    box-shadow: 0 0 15px var(--accent-color);
+    transition: box-shadow 0.3s ease;
+}
+
+header:hover,
+footer:hover,
+section:hover {
+    filter: brightness(1.2);
+    transition: filter 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
 
 /* Animations */
@@ -185,34 +280,76 @@ a {
     }
 }
 
-/* Hover Effects */
-a:hover, button:hover, .card:hover, nav ul li:hover {
-    box-shadow: 0 0 15px var(--accent-color);
-    transition: box-shadow 0.3s ease;
+/* Modal Style */
+.tour-modal-checkbox {
+    display: none;
 }
 
-header:hover,
-footer:hover,
-section:hover {
-    filter: brightness(1.2);
-    transition: filter 0.3s ease;
+.tour-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Mobile Styling */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: flex-end;
-    }
+.tour-modal-checkbox:checked + .tour-modal {
+    display: block;
 }
 
-/* Social Icon Styles */
-.social-icons a {
-    margin: 0 10px;
-    color: var(--accent-color);
-    text-decoration: none;
-    font-size: var(--font-size-md);
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
 }
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.option-button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #47ebeb;
+    border: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 25px; /* Round the button corners */
+    transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+    background-color: #2a8d8d;
+}
+
+
+
+
+/* Default Cursor */
+body {
+    cursor: default; /* System default cursor */
+}
+
+/* Pointer Cursor on Hover */
+a:hover, button:hover, .hoverable:hover {
+    cursor: pointer; /* Hand cursor when hovering */
+}
+

@@ -44,13 +44,14 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     padding-top: 60px;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeInModal 0.3s ease-in-out;
 }
 
 .tour-modal-checkbox:checked + .tour-modal {
     display: block;
 }
 
+/* Modal Content Box with Animation */
 .modal-content {
     background-color: #ffffff;
     margin: 5% auto;
@@ -58,10 +59,11 @@ body {
     border-radius: 10px;
     width: 50%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    animation: slideIn 0.3s ease-in-out;
+    animation: slideIn 0.3s ease-in-out, fadeInContent 0.3s ease-in-out;
     text-align: center;
 }
 
+/* Close Button with Animation */
 .close-btn {
     color: #aaa;
     font-size: 24px;
@@ -71,6 +73,8 @@ body {
     top: 15px;
     right: 20px;
     transition: color 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInCloseBtn 0.3s ease-in-out forwards;
 }
 
 .close-btn:hover,
@@ -78,7 +82,7 @@ body {
     color: #000;
 }
 
-/* Option Buttons */
+/* Option Buttons with Animation */
 .option-button {
     padding: 12px 25px;
     margin: 10px 5px;
@@ -90,6 +94,8 @@ body {
     font-weight: bold;
     border-radius: 30px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInButtons 0.5s ease-in-out 0.3s forwards;
 }
 
 .option-button:hover {
@@ -114,6 +120,15 @@ a:hover, button:hover, .card:hover, nav ul li:hover {
     }
 }
 
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes slideIn {
     from {
         transform: translateY(-20%);
@@ -125,13 +140,29 @@ a:hover, button:hover, .card:hover, nav ul li:hover {
     }
 }
 
-@keyframes slideUp {
+@keyframes fadeInContent {
     from {
-        transform: translateY(20px);
         opacity: 0;
     }
     to {
-        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInCloseBtn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInButtons {
+    from {
+        opacity: 0;
+    }
+    to {
         opacity: 1;
     }
 }

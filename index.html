@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mirza Raiyan Ahmed</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
     <div id="page">
         <header>
-            <div class="logo"><a href="https://mirza-raiyan-ahmed.github.io/Portfolio/" target="_blank">MRAT.</a></div>
+            <div class="logo"><a href="/portfolio.html" target="_blank">MRAT.</a></div>
             <nav>
                 <ul>
                     
@@ -21,6 +20,7 @@
                     <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#casestudies">Case Studies</a></li>
+                    <li><a href="#UnderGradThesis">Under Graduate Dissertation </a></li>
                 </ul>
             </nav>
         </header>
@@ -28,85 +28,83 @@
         <section id="about">
             <h1>Hi, I'm Mirza.</h1>
             <p>UI/UX Designer</p>
-            <p>I am a passionate and creative UI/UX and Product designer with a keen eye for detail and a strong foundation in design principles. Proficient in modern design</p>
+            <p>I am a passionate and creative UI/UX designer with a keen eye for detail and a strong foundation in design principles. Proficient in modern design</p>
 
-                      <!-- Take a Tour Button -->
-        <label for="tourModal" class="option-button">Take a Tour</label>
-        </section>
-        
-              <!-- Modal for Tour Options -->
-        <input type="checkbox" id="tourModal" class="tour-modal-checkbox">
-        
-        <!-- Modal structure -->
-        <div class="tour-modal">
-            <!-- Modal content with Close button inside -->
-            <div class="modal-content">
-                <!-- Close button inside the modal -->
-                <label for="tourModal" class="close-btn">&times;</label>
-                <h2 style="color: black;">Select What You Want to See</h2>
-                <button class="option-button modal-action">Portfolio</button>
-                <button class="option-button modal-action">Experience</button>
-                <button class="option-button modal-action">Achievements</button>
-                <button class="option-button modal-action">Contact</button>
-                <button class="option-button modal-action">Case Studies</button>
+              <!-- Take a Tour Button -->
+              <label for="tourModal" class="option-button">Take a Tour</label>
+            </section>
+    
+            <!-- Modal for Tour Options -->
+            <input type="checkbox" id="tourModal" class="tour-modal-checkbox">
+            <div class="tour-modal">
+                <div class="modal-content">
+                    <label for="tourModal" class="close-btn" id="closeBtn">&times;</label>
+                    <h2 style="color: black;">Select What You Want to See</h2>
+                    
+                    <button onclick="navigateAndClose('#portfolio')" class="option-button">Portfolio</button>
+                    <button onclick="navigateAndClose('#experience')" class="option-button">Experience</button>
+                    <button onclick="navigateAndClose('#achievements')" class="option-button">Achievements</button>
+                    <button onclick="navigateAndClose('#contact')" class="option-button">Contact</button>
+                    <button onclick="navigateAndClose('#caseStudies')" class="option-button">Case Studies</button>
+                    <button onclick="navigateAndClose('#UnderGradThesis')" class="option-button">Under Graduate Dissertation</button>
+                </div>
             </div>
-        </div>
-        <section id="portfolio">
-            <h2>Recent Work</h2>
-            <div class="card">
-                <a href="http://tiny.cc/HotelBookingApp" class="project-links" target="_blank">
-                    <h3>Hotel Booking App</h3>
-                </a>
-                <p>An intuitive app for booking hotels, providing seamless navigation and real-time availability updates.</p>
-            </div>
-            <div class="card">
-                <a href="http://tiny.cc/MusicPlayerApp" class="project-links" target="_blank">
-                    <h3>Music Player App</h3>
-                </a>
-                <p>A sleek music player app with playlist creation, shuffle, and personalized recommendations.</p>
-            </div>
-            <div class="card">
-                <a href="http://tiny.cc/E_LearningWebsite" class="project-links" target="_blank">
-                    <h3>E-Learning Website</h3>
-                </a>
-                <p>An engaging platform offering courses, quizzes, and progress tracking for learners of all ages.</p>
-            </div>
-            <div class="card">
-                <a href="http://tiny.cc/ShoeWebsite" class="project-links" target="_blank">
-                    <h3>Shoe Selling Website</h3>
-                </a>
-                <p>An e-commerce website tailored for shoe, boots, sneakers, and socks sales, featuring product galleries and secure checkout.</p>
-            </div>  
-            <div class="card">
-                <a href="http://tiny.cc/JuiceWebsite_LandingPage" class="project-links" target="_blank">
-                    <h3>Juice Website Landing Page</h3>
-                </a>
-                <p>A vibrant landing page designed for a juice brand, showcasing flavors and promoting health benefits.</p>
-            </div>
-            <div class="card">
-                <a href="http://tiny.cc/HazelNutSell_LandingPage" class="project-links" target="_blank">
-                    <h3>Hazelnut Selling Website Landing Page</h3>
-                </a>
-                <p>A stylish landing page for a hazelnut product line, emphasizing organic sourcing and quality.</p>
-            </div>
-            <div class="card">
-                <a href="http://tiny.cc/AnimatedOff-On" class="project-links" target="_blank">
-                    <h3>Animated Switch</h3>
-                </a>
-                <p>A creative toggle switch animation, showcasing smooth transitions and modern UI design.</p>
-            </div>
-              
-            <div class="card">
-                <a href="http://tiny.cc/1st_FurnitureWeb_Landing" class="project-links" target="_blank">
-                    <h3>Furniture Selling Website Landing Page</h3>
-                </a>
-                <p>A minimalist landing page for furniture, highlighting contemporary designs and sustainability.</p>
-            </div>
-        </section>
 
-
-        </section>
-
+            <section id="portfolio">
+                <h2>Recent Work</h2>
+                <div class="projects-grid">
+                    <div class="card">
+                        <a href="http://tiny.cc/HotelBookingApp" class="project-links" target="_blank">
+                            <h3>Hotel Booking App</h3>
+                        </a>
+                        <p>An intuitive app for booking hotels, providing seamless navigation and real-time availability updates.</p>
+                    </div>
+                    <div class="card">
+                        <a href="http://tiny.cc/MusicPlayerApp" class="project-links" target="_blank">
+                            <h3>Music Player App</h3>
+                        </a>
+                        <p>A sleek music player app with playlist creation, shuffle, and personalized recommendations.</p>
+                    </div>
+                    <div class="card">
+                        <a href="http://tiny.cc/E_LearningWebsite" class="project-links" target="_blank">
+                            <h3>E-Learning Website</h3>
+                        </a>
+                        <p>An engaging platform offering courses, quizzes, and progress tracking for learners of all ages.</p>
+                    </div>
+                    <div class="card">
+                        <a href="http://tiny.cc/JuiceWebsite_LandingPage" class="project-links" target="_blank">
+                            <h3>Juice Selling Website Landing Page</h3>
+                        </a>
+                        <p>A vibrant landing page designed for a juice brand, showcasing flavors and promoting health benefits.</p>
+                    </div>
+                    <div class="card">
+                        <a href="http://tiny.cc/ShoeWebsite" class="project-links" target="_blank">
+                            <h3>Shoe Selling Website</h3>
+                        </a>
+                        <p>An e-commerce website tailored for shoe, boots, sneakers, and socks sales, featuring product galleries and secure checkout.</p>
+                    </div>
+                    <div class="card">
+                        <a href="http://tiny.cc/HazelNutSell_LandingPage" class="project-links" target="_blank">
+                            <h3>Hazelnut Selling Landing Page</h3>
+                        </a>
+                        <p>A stylish landing page for a hazelnut product line, emphasizing organic sourcing and quality.</p>
+                    </div>
+                    <div class="card">
+                        <a href="http://tiny.cc/AnimatedOff-On" class="project-links" target="_blank">
+                            <h3>Animated Switch</h3>
+                        </a>
+                        <p>A creative toggle switch animation, showcasing smooth transitions and modern UI design.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <a href="http://tiny.cc/1st_FurnitureWeb_Landing" class="project-links" target="_blank">
+                            <h3>Furniture Selling Landing Page</h3>
+                        </a>
+                        <p>A minimalist landing page for furniture, highlighting contemporary designs and sustainability.</p>
+                    </div>
+                </div>
+            </section>
+            
         <section id="experience">
             <h2>Experience</h2>
             
@@ -146,6 +144,16 @@
             </div>
         
         </section>
+        <section id="UnderGradThesis">
+            <h2>Under Graduate Dissertation</h2>
+            <div class="projects-grid">
+                <div class="card">
+                    <a href="https://dspace.bracu.ac.bd/xmlui/handle/10361/24359" class="project-links" target="_blank">
+                        <h3>Tiny-ML based person identification in dynamic motion</h3>
+                    </a>
+            
+                </div>
+            </section>
 
         <section id="contact">
             <h2>Contact</h2>
@@ -190,18 +198,25 @@
         <footer>
             <p>&copy; 2024 Mirza Raiyan Ahmed. All rights reserved.</p>
         </footer>
+        
 
         <script>
-            // Function to navigate and close the modal
+                    // Function to navigate and close the modal
             function navigateAndClose(target) {
                 document.getElementById('tourModal').checked = false; // Uncheck the modal checkbox
                 location.href = target; // Navigate to the target section
             }
-    
+
             // Close button handler
             document.getElementById('closeBtn').addEventListener('click', () => {
                 document.getElementById('tourModal').checked = false; // Uncheck the modal checkbox
             });
+
+            // Cross button handler
+            document.getElementById('crossBtn').addEventListener('click', () => {
+                document.getElementById('tourModal').checked = false; // Uncheck the modal checkbox
+            });
+
         </script>
     </div>
 

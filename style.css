@@ -340,6 +340,12 @@ section:hover {
     background-color: #2a8d8d;
 }
 
+.tour-modal {
+    display: none;
+}
+.tour-modal-checkbox:checked + .tour-modal {
+    display: block;
+}
 
 
 

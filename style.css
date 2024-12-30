@@ -288,40 +288,47 @@ section:hover {
 .tour-modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
+    z-index: 1000;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: fadeIn 0.3s ease-in-out;
 }
 
 .tour-modal-checkbox:checked + .tour-modal {
-    display: block;
+    display: flex;
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 40%;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .close-btn:hover,
 .close-btn:focus {
     color: black;
-    text-decoration: none;
 }
 
 .option-button {
@@ -333,20 +340,23 @@ section:hover {
     font-size: 16px;
     color: white;
     border-radius: 25px; /* Round the button corners */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .option-button:hover {
     background-color: #2a8d8d;
+    transform: scale(1.05); /* Subtle zoom effect */
 }
 
-.tour-modal {
-    display: none;
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-.tour-modal-checkbox:checked + .tour-modal {
-    display: block;
-}
-
 
 
 /* Default Cursor */

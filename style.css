@@ -1,53 +1,4 @@
-/* Set the default cursor to normal (text or default system cursor) */
-body {
-    cursor: default; /* Default cursor for normal mouse events */
-    margin: 0;
-    padding: 0;
-    background-color: #2a2a31;
-    font-family: Arial, sans-serif;
-    color: #fff;
-}
-
-/* Change cursor to pointer for clickable elements */
-a:hover, button:hover, .card:hover, nav ul li:hover {
-    cursor: pointer;  /* Pointer cursor on hoverable elements */
-}
-
-/* Example of hoverable clickable elements */
-.card {
-    background-color: #35353f;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    color: #fff;
-    cursor: default; /* Keep normal cursor when not hovered */
-}
-
-.card:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s;
-}
-
-a {
-    text-decoration: none;
-    color: #47ebeb;
-}
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-:root {
-    --accent-color: #47ebeb;
-    --background-color: #2a2a31;
-    --text-color: #fff;
-    --text-color-muted: #b9b9b9;
-    --font-size-xs: 14px;
-    --font-size-sm: 16px;
-    --font-size-md: 18px;
-    --font-size-lg: 24px;
-    --font-size-xl: 28px;
-    --font-size-xxl: 88px;
-    --cursor-color: #FFF700; /* Lemon Yellow Color */
-}
-
+/* Default Body Styles */
 body {
     background-color: var(--background-color);
     font-family: Inter, Arial, sans-serif;
@@ -56,134 +7,6 @@ body {
     padding: 0;
     cursor: none; /* Hide default cursor */
     animation: fadeIn 1s ease-in-out;
-}
-
-#page {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    opacity: 0;
-    animation: slideUp 1s ease-in-out forwards;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    padding: 20px 0;
-    opacity: 0;
-    animation: slideInFromLeft 1s ease-in-out forwards;
-}
-
-.logo a {
-    font-size: var(--font-size-lg);
-    font-weight: 700;
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-nav {
-    margin-left: auto;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    margin: 0;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-nav ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    opacity: 0.8;
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-nav ul li a:hover {
-    opacity: 1;
-    transform: scale(1.1);
-    cursor: pointer; /* Hand cursor when hovering on links */
-}
-
-section {
-    margin-top: 40px;
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
-
-h1 {
-    font-size: var(--font-size-xxl);
-    margin-bottom: 16px;
-    opacity: 0;
-    animation: slideInFromBottom 1.2s ease-in-out forwards;
-}
-
-h2 {
-    font-size: var(--font-size-xl);
-    color: var(--accent-color);
-    margin-bottom: 24px;
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
-}
-
-h3 {
-    font-size: var(--font-size-lg);
-    transition: transform 0.3s;
-}
-
-h3:hover {
-    transform: translateY(-5px);
-    cursor: pointer; /* Hand cursor on hover */
-}
-
-p {
-    font-size: var(--font-size-sm);
-    line-height: 1.6;
-    color: var(--text-color-muted);
-}
-
-.card {
-    background-color: #35353f;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideInCard 0.8s ease-in-out forwards;
-}
-
-.card:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s;
-    cursor: pointer; /* Hand cursor when hovering on cards */
-}
-
-.project-links a {
-    color: var(--accent-color);
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    cursor: pointer; /* Hand cursor when hovering on project links */
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    border-top: 1px solid #484851;
-    opacity: 0;
-    animation: fadeIn 2.5s ease-in-out forwards;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    color: var(--accent-color);
-    text-decoration: none;
-    font-size: var(--font-size-md);
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
-    cursor: pointer; /* Hand cursor when hovering on social links */
 }
 
 /* Custom Cursor */
@@ -206,117 +29,39 @@ footer {
     transform: translate(-50%, -50%) scale(1.2);
 }
 
-/* Highlight on Hover */
-a:hover, button:hover, .card:hover, nav ul li:hover {
-    box-shadow: 0 0 15px var(--accent-color);
-    transition: box-shadow 0.3s ease;
-}
-
-header:hover,
-footer:hover,
-section:hover {
-    filter: brightness(1.2);
-    transition: filter 0.3s ease;
-}
-
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInFromLeft {
-    from {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInFromBottom {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInCard {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 /* Modal Style */
 .tour-modal-checkbox {
-    display: none; /* Hide the checkbox */
+    display: none;
 }
 
-/* Modal Background */
 .tour-modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 1000; /* Ensure it appears above other elements */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better visibility */
+    background-color: rgba(0, 0, 0, 0.7);
     padding-top: 60px;
     animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Show modal when checkbox is checked */
 .tour-modal-checkbox:checked + .tour-modal {
     display: block;
 }
 
-/* Modal Content Box */
 .modal-content {
-    background-color: #ffffff; /* Clean white background */
-    margin: 5% auto; /* Center vertically and horizontally */
+    background-color: #ffffff;
+    margin: 5% auto;
     padding: 30px;
-    border-radius: 10px; /* Rounded corners */
-    width: 50%; /* Moderate width */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     animation: slideIn 0.3s ease-in-out;
-    text-align: center; /* Center the content */
+    text-align: center;
 }
 
-/* Close Button */
 .close-btn {
     color: #aaa;
     font-size: 24px;
@@ -331,26 +76,32 @@ section:hover {
 .close-btn:hover,
 .close-btn:focus {
     color: #000;
-    text-decoration: none;
 }
 
 /* Option Buttons */
 .option-button {
     padding: 12px 25px;
-    margin: 10px 5px; /* Increased spacing for better layout */
+    margin: 10px 5px;
     cursor: pointer;
     background-color: #47ebeb;
     border: none;
     font-size: 16px;
     color: #ffffff;
     font-weight: bold;
-    border-radius: 30px; /* Fully rounded buttons */
+    border-radius: 30px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .option-button:hover {
     background-color: #2a8d8d;
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
+}
+
+/* General hover effects */
+a:hover, button:hover, .card:hover, nav ul li:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--accent-color);
+    transition: box-shadow 0.3s ease;
 }
 
 /* Animations */
@@ -374,14 +125,13 @@ section:hover {
     }
 }
 
-
-
-/* Default Cursor */
-body {
-    cursor: default; /* System default cursor */
-}
-
-/* Pointer Cursor on Hover */
-a:hover, button:hover, .hoverable:hover {
-    cursor: pointer; /* Hand cursor when hovering */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

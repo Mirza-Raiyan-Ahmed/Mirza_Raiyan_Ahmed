@@ -32,19 +32,19 @@
               <!-- Take a Tour Button -->
               <label for="tourModal" class="option-button">Take a Tour</label>
             </section>
-    
-            <!-- Modal for Tour Options -->
+                <!-- Modal for Tour Options -->
             <input type="checkbox" id="tourModal" class="tour-modal-checkbox">
             <div class="tour-modal">
+                <!-- Cross button outside modal content -->
+                <label for="tourModal" class="close-btn" id="closeBtn">&times;</label>
                 <div class="modal-content">
-                    <label for="tourModal" class="close-btn" id="closeBtn">&times;</label>
                     <h2 style="color: black;">Select What You Want to See</h2>
                     
-                    <button onclick="navigateAndClose('#portfolio')" class="option-button">Portfolio</button>
-                    <button onclick="navigateAndClose('#experience')" class="option-button">Experience</button>
-                    <button onclick="navigateAndClose('#achievements')" class="option-button">Achievements</button>
-                    <button onclick="navigateAndClose('#contact')" class="option-button">Contact</button>
-                    <button onclick="navigateAndClose('#caseStudies')" class="option-button">Case Studies</button>
+                    <button onclick="location.hash='#portfolio'" class="option-button">Portfolio</button>
+                    <button onclick="location.hash='#experience'" class="option-button">Experience</button>
+                    <button onclick="location.hash='#achievements'" class="option-button">Achievements</button>
+                    <button onclick="location.hash='#contact'" class="option-button">Contact</button>
+                    <button onclick="location.hash='#caseStudies'" class="option-button">Case Studies</button>
                 </div>
             </div>
 
